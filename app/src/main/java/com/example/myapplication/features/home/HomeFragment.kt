@@ -6,7 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
 import com.example.myapplication.R
+import java.util.logging.Level
+import java.util.logging.Logger
 
 class HomeFragment : Fragment() {
 
@@ -32,7 +35,10 @@ class HomeFragment : Fragment() {
     }
 
     private fun bind() {
-
+        viewModel.currentName.observe(this, Observer<String> { updatedName ->
+            Logger.getGlobal().log(Level.INFO, "Updated name = ${updatedName}")
+        })
+        viewModel.currentName.value = "Aymen"
     }
 
 }
