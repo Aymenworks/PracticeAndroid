@@ -9,6 +9,8 @@ buildscript {
         kotlinKtxVersion = '1.0.1'
         fragmentKtxVersion = '1.0.0'
         lifecycleVersion = '2.1.0-alpha02'
+        recyclerViewVersion = '1.1.0-alpha02'
+        roomVersion = '2.1.0-alpha04'
     }
     repositories {
         google()
